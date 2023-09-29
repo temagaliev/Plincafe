@@ -23,6 +23,7 @@ final class DSTabBar: UIStackView {
         }
         
         setupStyle()
+        
     }
     
     override init(frame:CGRect) {

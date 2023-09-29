@@ -10,13 +10,22 @@ import UIKit
 
 final class MainScreenViewController: UIViewController {
     
+    let label: UILabel = {
+        let label = UILabel()
+        label.text = "Hello"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         setupUI()
         setupViewControllers()
+
         selectTabBar()
         
     }
@@ -41,13 +50,15 @@ final class MainScreenViewController: UIViewController {
     
     private lazy var containerView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         return view
     }()
     
         
     private lazy var tabBar: DSTabBar = {
-        let items = [DSTabBarItem(itemIndex: 0, icon: UIImage(named: "menu"), text: "<Меню>")]
+        let items = [DSTabBarItem(itemIndex: 0, icon: UIImage(named: NameImage.menuIcon.rawValue), text: "<Меню>"),
+                     DSTabBarItem(itemIndex: 1, icon: UIImage(named: NameImage.cocktailsIcon.rawValue), text: "<Меню>")]
         let view = DSTabBar(items: items)
         view.tabBarSelectionHandler = { [weak self] tabItemindex in
             guard let self = self else { return }
@@ -73,14 +84,14 @@ final class MainScreenViewController: UIViewController {
         view.backgroundColor = .blue
         
         view.addSubview(containerView)
+        containerView.addSubview(tabBar)
+        
         containerView.activateAnchors()
-        containerView.topAnchor(to: view.bottomAnchor)
-        containerView.bottomAnchor(to: view.topAnchor)
+        containerView.topAnchor(to: view.topAnchor)
+        containerView.bottomAnchor(to: view.bottomAnchor)
         containerView.leadingAnchor(to: view.leadingAnchor)
         containerView.trailingAnchor(to: view.trailingAnchor)
         
-        
-        containerView.addSubview(tabBar)
         tabBar.activateAnchors()
         tabBar.heightAnchor(constant: constants.tabBarHeight)
         tabBar.leadingAnchor(to: containerView.leadingAnchor)
@@ -92,7 +103,7 @@ final class MainScreenViewController: UIViewController {
         let adsViewHeight: CGFloat = 80
         let topStackViewHeight: CGFloat = 60
         let settingsButtonHeight: CGFloat = 35
-        let tabBarHeight: CGFloat = 70
+        let tabBarHeight: CGFloat = 120
         let stackViewOffset: CGFloat = 12
     }
     
@@ -109,7 +120,8 @@ final class MainScreenViewController: UIViewController {
         vcView.topAnchor(to: containerView.topAnchor)
         vcView.leadingAnchor(to: containerView.leadingAnchor)
         vcView.trailingAnchor(to: containerView.trailingAnchor)
-        vcView.bottomAnchor(to: tabBar.topAnchor)
+//        vcView.bottomAnchor(to: tabBar.topAnchor)
+        vcView.bottomAnchor.constraint(equalTo: tabBar.topAnchor, constant: 40).isActive = true
         
         viewController.didMove(toParent: self)
         containerView.sendSubviewToBack(vcView)

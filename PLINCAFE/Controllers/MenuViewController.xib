@@ -37,7 +37,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KM-D3-ktZ">
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KM-D3-ktZ">
                     <rect key="frame" x="16" y="50" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="hQ9-fz-mav"/>
@@ -46,7 +46,7 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="qrIcon"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cW-Zi-UnB">
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cW-Zi-UnB">
                     <rect key="frame" x="309" y="50" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="GG4-bU-sAt"/>
@@ -61,7 +61,7 @@
                         <constraint firstAttribute="width" secondItem="n0K-96-dcb" secondAttribute="height" multiplier="340:195" id="seT-Sd-Ecd"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button" image="alcoholicCoctails"/>
+                    <state key="normal" title="Button" image="alcoholicCocktails"/>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4S9-jn-9sb">
                     <rect key="frame" x="16" y="337.66666666666669" width="343" height="196.66666666666669"/>
@@ -69,7 +69,7 @@
                         <constraint firstAttribute="width" secondItem="4S9-jn-9sb" secondAttribute="height" multiplier="340:195" id="Nrz-Pr-4HA"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button" image="nonAlcoCoctails"/>
+                    <state key="normal" title="Button" image="nonAlcoCocktails"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -100,10 +100,10 @@
         </view>
     </objects>
     <resources>
-        <image name="alcoholicCoctails" width="1883" height="1166"/>
+        <image name="alcoholicCocktails" width="1883" height="1166"/>
         <image name="heart" width="244" height="243"/>
         <image name="menuBg" width="2160" height="4800"/>
-        <image name="nonAlcoCoctails" width="1883" height="1166"/>
+        <image name="nonAlcoCocktails" width="1883" height="1166"/>
         <image name="qrIcon" width="371" height="371"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

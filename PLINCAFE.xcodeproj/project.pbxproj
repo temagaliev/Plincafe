@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240385A52AC6A09600DB2D71 /* NameImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240385A42AC6A09600DB2D71 /* NameImageModel.swift */; };
 		24284B372AC56CE5007FB6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B362AC56CE5007FB6F0 /* AppDelegate.swift */; };
 		24284B402AC56CE9007FB6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24284B3F2AC56CE9007FB6F0 /* Assets.xcassets */; };
 		24284B432AC56CE9007FB6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24284B412AC56CE9007FB6F0 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240385A42AC6A09600DB2D71 /* NameImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameImageModel.swift; sourceTree = "<group>"; };
 		24284B332AC56CE5007FB6F0 /* PLINCAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLINCAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24284B362AC56CE5007FB6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24284B3F2AC56CE9007FB6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240385A32AC6A08000DB2D71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				240385A42AC6A09600DB2D71 /* NameImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		24284B2A2AC56CE5007FB6F0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		24284B352AC56CE5007FB6F0 /* PLINCAFE */ = {
 			isa = PBXGroup;
 			children = (
+				240385A32AC6A08000DB2D71 /* Model */,
 				24284B362AC56CE5007FB6F0 /* AppDelegate.swift */,
 				24284B4A2AC56D7E007FB6F0 /* MainRouter.swift */,
 				24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */,
@@ -204,6 +215,7 @@
 				24284B6B2AC59BAE007FB6F0 /* DesignSystem.swift in Sources */,
 				24284B682AC59B9D007FB6F0 /* DSTabBar.swift in Sources */,
 				24284B4B2AC56D7E007FB6F0 /* MainRouter.swift in Sources */,
+				240385A52AC6A09600DB2D71 /* NameImageModel.swift in Sources */,
 				24284B692AC59B9D007FB6F0 /* DSTabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

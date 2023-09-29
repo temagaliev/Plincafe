@@ -60,7 +60,8 @@ final class DSTabBarItem: UIView {
     
     private lazy var backgroundView: UIView = {
         let view = UIImageView()
-        backgroundColor = DesignSystemColors.tabBarItem_defaultBackgroundColor
+//        view.image = UIImage(named: NameImage.tabBarBg.rawValue)
+//        backgroundColor = DesignSystemColors.tabBarItem_defaultBackgroundColor
         return view
     }()
     
@@ -92,7 +93,7 @@ final class DSTabBarItem: UIView {
         addSubview(selectorView)
         addSubview(backgroundView)
         backgroundView.addSubview(iconView)
-        backgroundView.addSubview(textLabel)
+//        backgroundView.addSubview(textLabel)
         addSubview(selectButton)
         
         selectorView.activateAnchors()
@@ -111,14 +112,15 @@ final class DSTabBarItem: UIView {
         backgroundView.trailingAnchor(to: trailingAnchor)
         backgroundView.bottomAnchor(to: bottomAnchor)
         
-        textLabel.topAnchor(to: iconView.bottomAnchor, constant: 4)
-        textLabel.leadingAnchor(to: backgroundView.leadingAnchor, constant: 12)
-        textLabel.trailingAnchor(to: backgroundView.trailingAnchor, constant: -12)
-        textLabel.bottomAnchor(to: backgroundView.bottomAnchor, constant: -8)
+//        textLabel.topAnchor(to: iconView.bottomAnchor, constant: 4)
+//        textLabel.leadingAnchor(to: backgroundView.leadingAnchor, constant: 12)
+//        textLabel.trailingAnchor(to: backgroundView.trailingAnchor, constant: -12)
+//        textLabel.bottomAnchor(to: backgroundView.bottomAnchor, constant: -8)
         
-        iconView.widthAnchor(constant: 30)
-        iconView.heightAnchor(constant: 30)
+        iconView.widthAnchor(constant: 50)
+        iconView.heightAnchor(constant: 50)
         iconView.centerXAnchor(to: centerXAnchor)
+        iconView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         //iconView.topAnchor(to: backgroundView.topAnchor)
         
         selectButton.equalToSuperview()
@@ -128,19 +130,9 @@ final class DSTabBarItem: UIView {
     
     private func setupSelectedState() {
         if isSelected {
-            textLabel.textColor = DesignSystemColors.tabBarItem_selectedTitleColor
-            iconView.tintColor = DesignSystemColors.tabBarItem_selectedIconColor
-            selectorView.backgroundColor = DesignSystemColors.tabBarItem_selectedSelectorColor
-            selectorView.applyShadow(color: DesignSystemColors.tabBarItem_selectedSelectorColor)
-            iconView.applyShadow(color: DesignSystemColors.tabBarItem_selectedSelectorColor)
-            textLabel.applyShadow(color: DesignSystemColors.tabBarItem_selectedSelectorColor)
+            iconView.image = UIImage(named: NameImage.selectedMenuIcon.rawValue)
         } else {
-            textLabel.textColor = DesignSystemColors.tabBarItem_defaultTitleColor
-            iconView.tintColor = DesignSystemColors.tabBarItem_defaultIconColor
-            selectorView.backgroundColor = DesignSystemColors.tabBarItem_defaultSelectorColor
-            selectorView.applyShadow(color: .clear)
-            iconView.applyShadow(color: .clear)
-            textLabel.applyShadow(color: .clear)
+            iconView.image = UIImage(named: NameImage.menuIcon.rawValue)
         }
     }
 }
