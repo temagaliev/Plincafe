@@ -39,6 +39,7 @@ final class DSTabBar: UIStackView {
     
     // MARK: - Public Properties
     var tabBarSelectionHandler: GenericCompletion<Int>?
+    
     private (set) var selectedIndex: Int = -1
     
     func setSelectedTab(_ tabIndex: Int) {

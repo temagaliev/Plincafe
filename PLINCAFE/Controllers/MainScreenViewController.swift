@@ -10,14 +10,6 @@ import UIKit
 
 final class MainScreenViewController: UIViewController {
     
-    let label: UILabel = {
-        let label = UILabel()
-        label.text = "Hello"
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +47,24 @@ final class MainScreenViewController: UIViewController {
         return view
     }()
     
+    private lazy var tabImageView: UIImageView = {
+        let view = UIImageView(image: UIImage(named: NameImage.tabBarBg.rawValue))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        return view
+    }()
+    
         
     private lazy var tabBar: DSTabBar = {
-        let items = [DSTabBarItem(itemIndex: 0, icon: UIImage(named: NameImage.menuIcon.rawValue), text: "<Меню>"),
-                     DSTabBarItem(itemIndex: 1, icon: UIImage(named: NameImage.cocktailsIcon.rawValue), text: "<Меню>")]
+        let items = [DSTabBarItem(itemIndex: 0, icon: UIImage(named: NameImage.cocktailsIcon.rawValue), selectedIcon: UIImage(named: NameImage.selectedCocktails.rawValue)),
+                     DSTabBarItem(itemIndex: 1, icon: UIImage(named: NameImage.menuIcon.rawValue), selectedIcon: UIImage(named: NameImage.selectedMenuIcon.rawValue)),
+                     DSTabBarItem(itemIndex: 2, icon: UIImage(named: NameImage.touchIcon.rawValue), selectedIcon: UIImage(named: NameImage.selectedTouch.rawValue)),
+                     DSTabBarItem(itemIndex: 3, icon: UIImage(named: NameImage.favoriteIcon.rawValue), selectedIcon: UIImage(named: NameImage.selectedFavoriteIcon.rawValue)),
+                     DSTabBarItem(itemIndex: 4, icon: UIImage(named: NameImage.mapIcon.rawValue), selectedIcon: UIImage(named: NameImage.selectedMapIcon.rawValue)),]
         let view = DSTabBar(items: items)
         view.tabBarSelectionHandler = { [weak self] tabItemindex in
             guard let self = self else { return }
-            
+            print("tabItemindex", tabItemindex)
             if (0...self.childControllers.count).contains(tabItemindex) {
                 self.selectViewController(tabItemindex)
             }
@@ -84,8 +86,9 @@ final class MainScreenViewController: UIViewController {
         view.backgroundColor = .blue
         
         view.addSubview(containerView)
+        containerView.addSubview(tabImageView)
         containerView.addSubview(tabBar)
-        
+
         containerView.activateAnchors()
         containerView.topAnchor(to: view.topAnchor)
         containerView.bottomAnchor(to: view.bottomAnchor)
@@ -97,6 +100,12 @@ final class MainScreenViewController: UIViewController {
         tabBar.leadingAnchor(to: containerView.leadingAnchor)
         tabBar.trailingAnchor(to: containerView.trailingAnchor)
         tabBar.bottomAnchor(to: containerView.bottomAnchor)
+        
+        tabImageView.activateAnchors()
+        tabImageView.heightAnchor(constant: constants.tabBarHeight)
+        tabImageView.leadingAnchor(to: containerView.leadingAnchor)
+        tabImageView.trailingAnchor(to: containerView.trailingAnchor)
+        tabImageView.bottomAnchor(to: containerView.bottomAnchor)
     }
     
     private struct Constants {

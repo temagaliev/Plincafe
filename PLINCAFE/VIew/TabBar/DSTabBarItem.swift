@@ -10,15 +10,14 @@ import UIKit
 final class DSTabBarItem: UIView {
     
     // MARK: - Lifecycle
-    init(itemIndex: Int, icon: UIImage?, text: String) {
+    init(itemIndex: Int, icon: UIImage?, selectedIcon: UIImage?) {
         self.isSelected = false
         self.itemIndex = itemIndex
         
         super.init(frame: .zero)
         
-        self.iconView.image = icon
-        self.textLabel.text = text
-        
+        self.notSelectedIconView.image = icon
+        self.selectedIconView.image = selectedIcon
         setupStyle()
     }
     
@@ -72,12 +71,17 @@ final class DSTabBarItem: UIView {
         return view
     }()
     
-    lazy var textLabel: UILabel = {
-        let view = UILabel()
-        view.textAlignment = .center
-        view.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
-        view.minimumScaleFactor = 0.3
-        view.adjustsFontSizeToFitWidth = true
+    private lazy var selectedIconView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    private lazy var notSelectedIconView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
         return view
     }()
     
@@ -85,6 +89,7 @@ final class DSTabBarItem: UIView {
         if let actionHandler = actionHandler {
             actionHandler(itemIndex)
         }
+        print("send")
     }
     
     private func setupStyle() {
@@ -93,13 +98,11 @@ final class DSTabBarItem: UIView {
         addSubview(selectorView)
         addSubview(backgroundView)
         backgroundView.addSubview(iconView)
-//        backgroundView.addSubview(textLabel)
         addSubview(selectButton)
         
         selectorView.activateAnchors()
         backgroundView.activateAnchors()
         iconView.activateAnchors()
-        textLabel.activateAnchors()
         selectButton.activateAnchors()
         
         selectorView.heightAnchor(constant: 5)
@@ -112,13 +115,13 @@ final class DSTabBarItem: UIView {
         backgroundView.trailingAnchor(to: trailingAnchor)
         backgroundView.bottomAnchor(to: bottomAnchor)
         
-//        textLabel.topAnchor(to: iconView.bottomAnchor, constant: 4)
-//        textLabel.leadingAnchor(to: backgroundView.leadingAnchor, constant: 12)
-//        textLabel.trailingAnchor(to: backgroundView.trailingAnchor, constant: -12)
-//        textLabel.bottomAnchor(to: backgroundView.bottomAnchor, constant: -8)
-        
-        iconView.widthAnchor(constant: 50)
-        iconView.heightAnchor(constant: 50)
+        if itemIndex == 2 {
+            iconView.widthAnchor(constant: 60)
+            iconView.heightAnchor(constant: 60)
+        } else {
+            iconView.widthAnchor(constant: 50)
+            iconView.heightAnchor(constant: 50)
+        }
         iconView.centerXAnchor(to: centerXAnchor)
         iconView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         //iconView.topAnchor(to: backgroundView.topAnchor)
@@ -130,9 +133,9 @@ final class DSTabBarItem: UIView {
     
     private func setupSelectedState() {
         if isSelected {
-            iconView.image = UIImage(named: NameImage.selectedMenuIcon.rawValue)
+            iconView.image = selectedIconView.image
         } else {
-            iconView.image = UIImage(named: NameImage.menuIcon.rawValue)
+            iconView.image = notSelectedIconView.image
         }
     }
 }
