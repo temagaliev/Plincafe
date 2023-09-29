@@ -29,4 +29,5 @@ enum NameImage: String {
     case tabBarBg = "tabBarBg"
     case touchIcon = "touchIcon"
     case selectedTouch = "selectedTouch"
+    case backButton = "backButton"
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		240385A52AC6A09600DB2D71 /* NameImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240385A42AC6A09600DB2D71 /* NameImageModel.swift */; };
+		240385AA2AC6EFDD00DB2D71 /* CockteilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240385A82AC6EFDD00DB2D71 /* CockteilTableViewCell.swift */; };
+		240385AB2AC6EFDD00DB2D71 /* CockteilTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240385A92AC6EFDD00DB2D71 /* CockteilTableViewCell.xib */; };
 		24284B372AC56CE5007FB6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B362AC56CE5007FB6F0 /* AppDelegate.swift */; };
 		24284B402AC56CE9007FB6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24284B3F2AC56CE9007FB6F0 /* Assets.xcassets */; };
 		24284B432AC56CE9007FB6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24284B412AC56CE9007FB6F0 /* LaunchScreen.storyboard */; };
@@ -22,10 +24,20 @@
 		24284B692AC59B9D007FB6F0 /* DSTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */; };
 		24284B6B2AC59BAE007FB6F0 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */; };
 		24284B6D2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */; };
+		24B8253C2AC71C8400BBCC98 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253B2AC71C8400BBCC98 /* FavoriteViewController.swift */; };
+		24B8253E2AC71DE400BBCC98 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253D2AC71DE400BBCC98 /* BasketViewController.swift */; };
+		24B825412AC71E1E00BBCC98 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */; };
+		24B825422AC71E1E00BBCC98 /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B825402AC71E1E00BBCC98 /* ReservationViewController.xib */; };
+		24B825452AC71E3600BBCC98 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B825432AC71E3600BBCC98 /* MapViewController.swift */; };
+		24B825462AC71E3600BBCC98 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B825442AC71E3600BBCC98 /* MapViewController.xib */; };
+		24B825582AC7286C00BBCC98 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B825562AC7286C00BBCC98 /* QrViewController.swift */; };
+		24B825592AC7286C00BBCC98 /* QrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B825572AC7286C00BBCC98 /* QrViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		240385A42AC6A09600DB2D71 /* NameImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameImageModel.swift; sourceTree = "<group>"; };
+		240385A82AC6EFDD00DB2D71 /* CockteilTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockteilTableViewCell.swift; sourceTree = "<group>"; };
+		240385A92AC6EFDD00DB2D71 /* CockteilTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CockteilTableViewCell.xib; sourceTree = "<group>"; };
 		24284B332AC56CE5007FB6F0 /* PLINCAFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLINCAFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24284B362AC56CE5007FB6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24284B3F2AC56CE9007FB6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +54,14 @@
 		24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTabBarItem.swift; sourceTree = "<group>"; };
 		24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIHelpers.swift"; sourceTree = "<group>"; };
+		24B8253B2AC71C8400BBCC98 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		24B8253D2AC71DE400BBCC98 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		24B825402AC71E1E00BBCC98 /* ReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationViewController.xib; sourceTree = "<group>"; };
+		24B825432AC71E3600BBCC98 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		24B825442AC71E3600BBCC98 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		24B825562AC7286C00BBCC98 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
+		24B825572AC7286C00BBCC98 /* QrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,15 @@
 				240385A42AC6A09600DB2D71 /* NameImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		240385AC2AC6F12900DB2D71 /* CockteilCell */ = {
+			isa = PBXGroup;
+			children = (
+				240385A82AC6EFDD00DB2D71 /* CockteilTableViewCell.swift */,
+				240385A92AC6EFDD00DB2D71 /* CockteilTableViewCell.xib */,
+			);
+			path = CockteilCell;
 			sourceTree = "<group>";
 		};
 		24284B2A2AC56CE5007FB6F0 = {
@@ -100,11 +129,16 @@
 		24284B562AC580BC007FB6F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				24284B522AC580AC007FB6F0 /* MenuViewController.swift */,
-				24284B532AC580AC007FB6F0 /* MenuViewController.xib */,
-				24284B5E2AC58BD7007FB6F0 /* CocktailsViewController.swift */,
-				24284B5F2AC58BD7007FB6F0 /* CocktailsViewController.xib */,
 				24284B622AC59B67007FB6F0 /* MainScreenViewController.swift */,
+				24B825472AC71E7000BBCC98 /* Menu */,
+				24B825482AC71E7900BBCC98 /* Cockteils */,
+				24B825492AC71E8900BBCC98 /* Favorite */,
+				24B8254A2AC71E9700BBCC98 /* Basket */,
+				24B8254B2AC71E9F00BBCC98 /* Reservation */,
+				24B8254C2AC71EA800BBCC98 /* Map */,
+				24B825512AC7204D00BBCC98 /* QRCode */,
+				24B825562AC7286C00BBCC98 /* QrViewController.swift */,
+				24B825572AC7286C00BBCC98 /* QrViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				24284B652AC59B9D007FB6F0 /* TabBar */,
+				240385AC2AC6F12900DB2D71 /* CockteilCell */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -132,6 +167,65 @@
 				24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		24B825472AC71E7000BBCC98 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				24284B522AC580AC007FB6F0 /* MenuViewController.swift */,
+				24284B532AC580AC007FB6F0 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		24B825482AC71E7900BBCC98 /* Cockteils */ = {
+			isa = PBXGroup;
+			children = (
+				24284B5E2AC58BD7007FB6F0 /* CocktailsViewController.swift */,
+				24284B5F2AC58BD7007FB6F0 /* CocktailsViewController.xib */,
+			);
+			path = Cockteils;
+			sourceTree = "<group>";
+		};
+		24B825492AC71E8900BBCC98 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				24B8253B2AC71C8400BBCC98 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		24B8254A2AC71E9700BBCC98 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				24B8253D2AC71DE400BBCC98 /* BasketViewController.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		24B8254B2AC71E9F00BBCC98 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */,
+				24B825402AC71E1E00BBCC98 /* ReservationViewController.xib */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		24B8254C2AC71EA800BBCC98 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				24B825432AC71E3600BBCC98 /* MapViewController.swift */,
+				24B825442AC71E3600BBCC98 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		24B825512AC7204D00BBCC98 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +287,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24284B432AC56CE9007FB6F0 /* LaunchScreen.storyboard in Resources */,
+				24B825422AC71E1E00BBCC98 /* ReservationViewController.xib in Resources */,
 				24284B552AC580AC007FB6F0 /* MenuViewController.xib in Resources */,
+				24B825462AC71E3600BBCC98 /* MapViewController.xib in Resources */,
 				24284B612AC58BD7007FB6F0 /* CocktailsViewController.xib in Resources */,
 				24284B402AC56CE9007FB6F0 /* Assets.xcassets in Resources */,
 				24284B592AC585EF007FB6F0 /* RacingSansOner.ttf in Resources */,
+				240385AB2AC6EFDD00DB2D71 /* CockteilTableViewCell.xib in Resources */,
+				24B825592AC7286C00BBCC98 /* QrViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,13 +307,19 @@
 			files = (
 				24284B632AC59B67007FB6F0 /* MainScreenViewController.swift in Sources */,
 				24284B602AC58BD7007FB6F0 /* CocktailsViewController.swift in Sources */,
+				24B8253E2AC71DE400BBCC98 /* BasketViewController.swift in Sources */,
 				24284B372AC56CE5007FB6F0 /* AppDelegate.swift in Sources */,
 				24284B542AC580AC007FB6F0 /* MenuViewController.swift in Sources */,
+				24B825412AC71E1E00BBCC98 /* ReservationViewController.swift in Sources */,
 				24284B6D2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift in Sources */,
 				24284B6B2AC59BAE007FB6F0 /* DesignSystem.swift in Sources */,
+				24B825582AC7286C00BBCC98 /* QrViewController.swift in Sources */,
 				24284B682AC59B9D007FB6F0 /* DSTabBar.swift in Sources */,
 				24284B4B2AC56D7E007FB6F0 /* MainRouter.swift in Sources */,
+				240385AA2AC6EFDD00DB2D71 /* CockteilTableViewCell.swift in Sources */,
 				240385A52AC6A09600DB2D71 /* NameImageModel.swift in Sources */,
+				24B8253C2AC71C8400BBCC98 /* FavoriteViewController.swift in Sources */,
+				24B825452AC71E3600BBCC98 /* MapViewController.swift in Sources */,
 				24284B692AC59B9D007FB6F0 /* DSTabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

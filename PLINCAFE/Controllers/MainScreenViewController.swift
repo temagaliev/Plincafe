@@ -10,13 +10,15 @@ import UIKit
 
 final class MainScreenViewController: UIViewController {
     
+    let viewControllers = UIViewController()
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 
         setupUI()
-        setupViewControllers()
+        setupVC()
 
         selectTabBar()
         
@@ -29,15 +31,21 @@ final class MainScreenViewController: UIViewController {
     
 
     // MARK: Private properties
-    private lazy var menuViewController: MenuViewController = {
-        let viewController = MenuViewController()
-        self.add(asChildViewController: viewController)
-        return viewController
-    }()
+//    private lazy var menuViewController: MenuViewController = {
+//        let viewController = MenuViewController()
+//        self.add(asChildViewController: viewController)
+//        return viewController
+//    }()
+//
+//    private lazy var cockteilsViewController: CocktailsViewController = {
+//        let viewController = CocktailsViewController()
+//        self.add(asChildViewController: viewController)
+//        return viewController
+//    }()
 
     
  
-    private var childControllers: [UIViewController] = []
+    private var childControllers: [UINavigationController] = []
     private lazy var constants = Constants()
     
     private lazy var containerView: UIView = {
@@ -77,8 +85,7 @@ final class MainScreenViewController: UIViewController {
     
     
     private func setupViewControllers() {
-        childControllers.append(menuViewController)
-//        childControllers.append(galleryViewController)
+
 //        childControllers.append(partnersViewController)
     }
     
@@ -159,6 +166,21 @@ final class MainScreenViewController: UIViewController {
                 remove(asChildViewController: viewController)
             }
         }
+    }
+    
+    private func setupVC() {
+        childControllers = [
+            createNavController(for: MenuViewController()),
+            createNavController(for: BasketViewController()),
+            createNavController(for: ReservationViewController()),
+            createNavController(for: FavoriteViewController()),
+            createNavController(for: MapViewController())
+        ]
+    }
+        
+    private func createNavController(for rootViewController: UIViewController) -> UINavigationController {
+        let navController = UINavigationController(rootViewController: rootViewController)
+        return navController
     }
     
 }

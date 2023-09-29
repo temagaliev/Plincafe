@@ -11,7 +11,20 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
+    @IBAction func alcoAction(_ sender: Any) {
+        navigationController?.pushViewController(CocktailsViewController(), animated: true)
+    }
+    
+    @IBAction func onNonAlcoButtonClick(_ sender: Any) {
+        navigationController?.pushViewController(CocktailsViewController(), animated: true)
+    }
+
+    @IBAction func qrCodeButtonClick(_ sender: Any) {
+        navigationController?.pushViewController(QrViewController(), animated: true)
     }
 }
 //мейн скрин контроллер
