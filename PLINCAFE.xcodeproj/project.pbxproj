@@ -24,6 +24,11 @@
 		24284B692AC59B9D007FB6F0 /* DSTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */; };
 		24284B6B2AC59BAE007FB6F0 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */; };
 		24284B6D2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */; };
+		2469D61D2ACBE2C8004D56F2 /* MyReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469D61B2ACBE2C8004D56F2 /* MyReservationViewController.swift */; };
+		2469D61E2ACBE2C8004D56F2 /* MyReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2469D61C2ACBE2C8004D56F2 /* MyReservationViewController.xib */; };
+		2469D6222ACC1E8C004D56F2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469D6212ACC1E8C004D56F2 /* Place.swift */; };
+		2469D6242ACC5A14004D56F2 /* CockteilList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469D6232ACC5A14004D56F2 /* CockteilList.swift */; };
+		248BD5E62ACAAA4E00C51438 /* CockteilsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248BD5E52ACAAA4E00C51438 /* CockteilsModel.swift */; };
 		24B8253C2AC71C8400BBCC98 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253B2AC71C8400BBCC98 /* FavoriteViewController.swift */; };
 		24B8253E2AC71DE400BBCC98 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253D2AC71DE400BBCC98 /* BasketViewController.swift */; };
 		24B825412AC71E1E00BBCC98 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */; };
@@ -54,6 +59,11 @@
 		24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTabBarItem.swift; sourceTree = "<group>"; };
 		24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIHelpers.swift"; sourceTree = "<group>"; };
+		2469D61B2ACBE2C8004D56F2 /* MyReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReservationViewController.swift; sourceTree = "<group>"; };
+		2469D61C2ACBE2C8004D56F2 /* MyReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReservationViewController.xib; sourceTree = "<group>"; };
+		2469D6212ACC1E8C004D56F2 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		2469D6232ACC5A14004D56F2 /* CockteilList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockteilList.swift; sourceTree = "<group>"; };
+		248BD5E52ACAAA4E00C51438 /* CockteilsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockteilsModel.swift; sourceTree = "<group>"; };
 		24B8253B2AC71C8400BBCC98 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		24B8253D2AC71DE400BBCC98 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				240385A42AC6A09600DB2D71 /* NameImageModel.swift */,
+				248BD5E52ACAAA4E00C51438 /* CockteilsModel.swift */,
+				2469D6212ACC1E8C004D56F2 /* Place.swift */,
+				2469D6232ACC5A14004D56F2 /* CockteilList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,13 +124,10 @@
 		24284B352AC56CE5007FB6F0 /* PLINCAFE */ = {
 			isa = PBXGroup;
 			children = (
-				240385A32AC6A08000DB2D71 /* Model */,
 				24284B362AC56CE5007FB6F0 /* AppDelegate.swift */,
-				24284B4A2AC56D7E007FB6F0 /* MainRouter.swift */,
-				24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */,
-				24284B642AC59B87007FB6F0 /* VIew */,
-				24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */,
-				24284B562AC580BC007FB6F0 /* Controllers */,
+				240385A32AC6A08000DB2D71 /* Model */,
+				248BD5E72ACADD7800C51438 /* UI */,
+				248BD5E42ACAA9AA00C51438 /* Helpers */,
 				24284B3F2AC56CE9007FB6F0 /* Assets.xcassets */,
 				24284B412AC56CE9007FB6F0 /* LaunchScreen.storyboard */,
 				24284B442AC56CE9007FB6F0 /* Info.plist */,
@@ -126,7 +136,7 @@
 			path = PLINCAFE;
 			sourceTree = "<group>";
 		};
-		24284B562AC580BC007FB6F0 /* Controllers */ = {
+		24284B562AC580BC007FB6F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				24284B622AC59B67007FB6F0 /* MainScreenViewController.swift */,
@@ -137,10 +147,8 @@
 				24B8254B2AC71E9F00BBCC98 /* Reservation */,
 				24B8254C2AC71EA800BBCC98 /* Map */,
 				24B825512AC7204D00BBCC98 /* QRCode */,
-				24B825562AC7286C00BBCC98 /* QrViewController.swift */,
-				24B825572AC7286C00BBCC98 /* QrViewController.xib */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		24284B572AC585D2007FB6F0 /* Fonts */ = {
@@ -151,13 +159,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		24284B642AC59B87007FB6F0 /* VIew */ = {
+		24284B642AC59B87007FB6F0 /* CommanViews */ = {
 			isa = PBXGroup;
 			children = (
-				24284B652AC59B9D007FB6F0 /* TabBar */,
 				240385AC2AC6F12900DB2D71 /* CockteilCell */,
 			);
-			path = VIew;
+			path = CommanViews;
 			sourceTree = "<group>";
 		};
 		24284B652AC59B9D007FB6F0 /* TabBar */ = {
@@ -167,6 +174,34 @@
 				24284B672AC59B9D007FB6F0 /* DSTabBarItem.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		248BD5E42ACAA9AA00C51438 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24284B4A2AC56D7E007FB6F0 /* MainRouter.swift */,
+				24284B6C2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		248BD5E72ACADD7800C51438 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				248BD5E82ACADDA000C51438 /* DesignSystem */,
+				24284B642AC59B87007FB6F0 /* CommanViews */,
+				24284B562AC580BC007FB6F0 /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		248BD5E82ACADDA000C51438 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				24284B652AC59B9D007FB6F0 /* TabBar */,
+				24284B6A2AC59BAE007FB6F0 /* DesignSystem.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		24B825472AC71E7000BBCC98 /* Menu */ = {
@@ -208,6 +243,8 @@
 			children = (
 				24B8253F2AC71E1E00BBCC98 /* ReservationViewController.swift */,
 				24B825402AC71E1E00BBCC98 /* ReservationViewController.xib */,
+				2469D61B2ACBE2C8004D56F2 /* MyReservationViewController.swift */,
+				2469D61C2ACBE2C8004D56F2 /* MyReservationViewController.xib */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -224,6 +261,8 @@
 		24B825512AC7204D00BBCC98 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
+				24B825562AC7286C00BBCC98 /* QrViewController.swift */,
+				24B825572AC7286C00BBCC98 /* QrViewController.xib */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -256,7 +295,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					24284B322AC56CE5007FB6F0 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -291,6 +330,7 @@
 				24284B552AC580AC007FB6F0 /* MenuViewController.xib in Resources */,
 				24B825462AC71E3600BBCC98 /* MapViewController.xib in Resources */,
 				24284B612AC58BD7007FB6F0 /* CocktailsViewController.xib in Resources */,
+				2469D61E2ACBE2C8004D56F2 /* MyReservationViewController.xib in Resources */,
 				24284B402AC56CE9007FB6F0 /* Assets.xcassets in Resources */,
 				24284B592AC585EF007FB6F0 /* RacingSansOner.ttf in Resources */,
 				240385AB2AC6EFDD00DB2D71 /* CockteilTableViewCell.xib in Resources */,
@@ -306,13 +346,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				24284B632AC59B67007FB6F0 /* MainScreenViewController.swift in Sources */,
+				2469D6222ACC1E8C004D56F2 /* Place.swift in Sources */,
 				24284B602AC58BD7007FB6F0 /* CocktailsViewController.swift in Sources */,
 				24B8253E2AC71DE400BBCC98 /* BasketViewController.swift in Sources */,
 				24284B372AC56CE5007FB6F0 /* AppDelegate.swift in Sources */,
+				248BD5E62ACAAA4E00C51438 /* CockteilsModel.swift in Sources */,
 				24284B542AC580AC007FB6F0 /* MenuViewController.swift in Sources */,
+				2469D6242ACC5A14004D56F2 /* CockteilList.swift in Sources */,
 				24B825412AC71E1E00BBCC98 /* ReservationViewController.swift in Sources */,
 				24284B6D2AC5A4A0007FB6F0 /* UIView+UIHelpers.swift in Sources */,
 				24284B6B2AC59BAE007FB6F0 /* DesignSystem.swift in Sources */,
+				2469D61D2ACBE2C8004D56F2 /* MyReservationViewController.swift in Sources */,
 				24B825582AC7286C00BBCC98 /* QrViewController.swift in Sources */,
 				24284B682AC59B9D007FB6F0 /* DSTabBar.swift in Sources */,
 				24284B4B2AC56D7E007FB6F0 /* MainRouter.swift in Sources */,
@@ -374,6 +418,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -434,6 +479,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -464,8 +510,8 @@
 				INFOPLIST_FILE = PLINCAFE/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,8 +541,8 @@
 				INFOPLIST_FILE = PLINCAFE/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

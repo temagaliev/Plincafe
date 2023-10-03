@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RacingSansOner.ttf">
+            <string>RacingSansOne-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationViewController" customModule="PLINCAFE" customModuleProvider="target">
+            <connections>
+                <outlet property="dateTextField" destination="yRO-4Z-mKy" id="G4o-qk-mAK"/>
+                <outlet property="nameTextField" destination="V60-44-6Ns" id="Onj-e7-ISO"/>
+                <outlet property="numberOfPeopleTextField" destination="Z69-1r-aHD" id="qNv-wi-P3u"/>
+                <outlet property="phoneNumberTextField" destination="HeG-nH-JoC" id="yUT-l8-ZGd"/>
+                <outlet property="timeTextField" destination="xvP-Ys-G9c" id="P0v-Mq-Lgl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defBg" translatesAutoresizingMaskIntoConstraints="NO" id="ZWn-SH-lbF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILU-Zw-7oF">
+                    <rect key="frame" x="60" y="66" width="255" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DIA-vj-6Jo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RacingSansOne-Regular" family="Racing Sans One" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-FM-ooE">
+                    <rect key="frame" x="309" y="58" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="7Hc-5L-CMY"/>
+                        <constraint firstAttribute="height" constant="50" id="tSP-nZ-DAm"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="reserv"/>
+                    <connections>
+                        <action selector="onReservationListButtonClick:" destination="-1" eventType="touchUpInside" id="0St-ZC-s0i"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ig-Ra-GPJ">
+                    <rect key="frame" x="8" y="163" width="54" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="cHB-mb-HVn"/>
+                        <constraint firstAttribute="height" constant="24" id="tYr-i9-kop"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktK-eI-P5T">
+                    <rect key="frame" x="8" y="205" width="52" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="olx-dn-NQ5"/>
+                        <constraint firstAttribute="width" constant="52" id="yCi-k3-A4L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of people: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mt8-e3-vYr">
+                    <rect key="frame" x="8" y="247" width="175" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Nx1-Ra-uFq"/>
+                        <constraint firstAttribute="width" constant="175" id="hzy-3O-XIU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zG-xb-bcl">
+                    <rect key="frame" x="8" y="289" width="140" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="XBd-c3-Zpm"/>
+                        <constraint firstAttribute="height" constant="24" id="zL9-Xj-qpA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V60-44-6Ns">
+                    <rect key="frame" x="70" y="116" width="297" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="0.080472410265412575" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRO-4Z-mKy">
+                    <rect key="frame" x="70" y="158" width="297" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="0.080472410270000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvP-Ys-G9c">
+                    <rect key="frame" x="68" y="200" width="299" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="0.080472410270000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-1r-aHD">
+                    <rect key="frame" x="191" y="242" width="176" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="0.080472410270000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HeG-nH-JoC">
+                    <rect key="frame" x="156" y="284" width="211" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="0.080472410270000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" textContentType="tel"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpe-qK-dek">
+                    <rect key="frame" x="8" y="121" width="54" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Ra1-4I-E3x"/>
+                        <constraint firstAttribute="width" constant="54" id="ldv-db-ftb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeReserv" translatesAutoresizingMaskIntoConstraints="NO" id="BO2-1U-yDC">
+                    <rect key="frame" x="45" y="338" width="285" height="285"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BO2-1U-yDC" secondAttribute="height" multiplier="1:1" id="AbG-I5-16n"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zio-9E-5WR">
+                    <rect key="frame" x="137.66666666666666" y="608" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="OkM-lF-F2D"/>
+                        <constraint firstAttribute="height" constant="40" id="cs5-uy-4mG"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="reserveButton"/>
+                    <connections>
+                        <action selector="onResrveButtonClick:" destination="-1" eventType="touchUpInside" id="TnA-sY-RTm"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-mH-6Za">
+                    <rect key="frame" x="157.66666666666666" y="388" width="60" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNU-nv-l4R">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="iwo-cW-A5P"/>
+                                <constraint firstAttribute="height" constant="40" id="nZC-bh-ge2"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="pYP-Sg-sNE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-H7-sih">
+                            <rect key="frame" x="30" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="OyZ-5Q-HYv"/>
+                                <constraint firstAttribute="height" constant="40" id="QLu-pi-ZmW"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="WVP-m7-QDs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoL-sw-Alc">
+                    <rect key="frame" x="142.66666666666666" y="428" width="90" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXi-gq-7e1">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="2Xm-iw-iGr"/>
+                                <constraint firstAttribute="height" constant="40" id="nkK-Fr-g1p"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="hm6-hm-h4W"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhZ-gt-xHO">
+                            <rect key="frame" x="30" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="5LO-wc-Apd"/>
+                                <constraint firstAttribute="height" constant="40" id="ZFg-fe-md9"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="UE1-jL-jHt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWg-61-pIU">
+                            <rect key="frame" x="60" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="IyH-93-qlV"/>
+                                <constraint firstAttribute="height" constant="40" id="Zyk-kw-wUv"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="zUT-FN-Vb3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-Rx-n5t">
+                    <rect key="frame" x="127.66666666666669" y="468" width="120" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-7r-70M">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Kas-vB-Moa"/>
+                                <constraint firstAttribute="width" constant="30" id="Xea-Wy-xL0"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="67K-3N-ysy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGS-5I-xgM">
+                            <rect key="frame" x="29.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4Eu-Oa-ULZ"/>
+                                <constraint firstAttribute="width" constant="30" id="pg4-0R-IKU"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="dAu-F1-5KR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sZ-dg-Q3l">
+                            <rect key="frame" x="59.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="6mg-jB-52Y"/>
+                                <constraint firstAttribute="height" constant="40" id="F1U-J6-upq"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="Mbx-Al-dUQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlS-vp-fNq">
+                            <rect key="frame" x="89.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Icg-Ek-I3j"/>
+                                <constraint firstAttribute="width" constant="30" id="xVa-73-Lig"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="iQ4-TR-Fz9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-Kd-nSt">
+                    <rect key="frame" x="112.66666666666669" y="508" width="150" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-sQ-MQe">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="bdR-L0-GQK"/>
+                                <constraint firstAttribute="width" constant="30" id="iLQ-l5-67t"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="HZH-V8-Y7p"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J29-7f-EDD">
+                            <rect key="frame" x="29.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="0cP-aa-8AM"/>
+                                <constraint firstAttribute="width" constant="30" id="zqX-g5-RKd"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="glV-Us-flB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx9-tt-JqC">
+                            <rect key="frame" x="59.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Ee1-Et-4F6"/>
+                                <constraint firstAttribute="height" constant="40" id="Zn2-vu-PCs"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="Iw0-Xb-rWW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4v-sq-OLy">
+                            <rect key="frame" x="89.999999999999986" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="JhR-B8-Rod"/>
+                                <constraint firstAttribute="height" constant="40" id="bIe-Yw-hbl"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="aHC-Jf-GaM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-6X-buQ">
+                            <rect key="frame" x="120" y="0.0" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="1Fl-9O-Woi"/>
+                                <constraint firstAttribute="height" constant="40" id="EGm-XW-NLd"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tableReservation"/>
+                            <connections>
+                                <action selector="onReserveTableButtonClick:" destination="-1" eventType="touchUpInside" id="3ln-eW-u19"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3zG-xb-bcl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="01a-Zz-hL3"/>
+                <constraint firstItem="Yz7-Rx-n5t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="137-U0-MYc"/>
+                <constraint firstItem="ILU-Zw-7oF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="3JJ-5W-ARw"/>
+                <constraint firstItem="ANS-Kd-nSt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="52c-ET-pVd"/>
+                <constraint firstItem="V60-44-6Ns" firstAttribute="leading" secondItem="tpe-qK-dek" secondAttribute="trailing" constant="8" id="5l4-CS-uen"/>
+                <constraint firstAttribute="trailing" secondItem="HeG-nH-JoC" secondAttribute="trailing" constant="8" id="648-oF-y7R"/>
+                <constraint firstItem="Z69-1r-aHD" firstAttribute="top" secondItem="xvP-Ys-G9c" secondAttribute="bottom" constant="8" id="6sh-Jr-RBM"/>
+                <constraint firstItem="mt8-e3-vYr" firstAttribute="top" secondItem="ktK-eI-P5T" secondAttribute="bottom" constant="18" id="8df-10-NeS"/>
+                <constraint firstItem="3zG-xb-bcl" firstAttribute="top" secondItem="mt8-e3-vYr" secondAttribute="bottom" constant="18" id="9OP-kH-Ii8"/>
+                <constraint firstItem="ZWn-SH-lbF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="D5l-4E-kzk"/>
+                <constraint firstItem="yoL-sw-Alc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Eat-M3-aly"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyo-FM-ooE" secondAttribute="trailing" constant="16" id="End-kf-54y"/>
+                <constraint firstItem="ZWn-SH-lbF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Eqs-gK-AJP"/>
+                <constraint firstItem="V60-44-6Ns" firstAttribute="top" secondItem="jyo-FM-ooE" secondAttribute="bottom" constant="8" id="F88-sm-Jcm"/>
+                <constraint firstItem="ktK-eI-P5T" firstAttribute="top" secondItem="9ig-Ra-GPJ" secondAttribute="bottom" constant="18" id="HQz-vi-0lW"/>
+                <constraint firstAttribute="trailing" secondItem="yRO-4Z-mKy" secondAttribute="trailing" constant="8" id="Him-cZ-DzM"/>
+                <constraint firstItem="xvP-Ys-G9c" firstAttribute="top" secondItem="yRO-4Z-mKy" secondAttribute="bottom" constant="8" id="JsC-hm-lbG"/>
+                <constraint firstItem="Zio-9E-5WR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MMh-sz-coh"/>
+                <constraint firstItem="4lX-mH-6Za" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PKC-td-vSq"/>
+                <constraint firstItem="yRO-4Z-mKy" firstAttribute="top" secondItem="V60-44-6Ns" secondAttribute="bottom" constant="8" id="QR0-XW-RcF"/>
+                <constraint firstItem="ANS-Kd-nSt" firstAttribute="top" secondItem="Yz7-Rx-n5t" secondAttribute="bottom" id="Qt7-nT-pXV"/>
+                <constraint firstItem="9ig-Ra-GPJ" firstAttribute="top" secondItem="tpe-qK-dek" secondAttribute="bottom" constant="18" id="R3z-1Q-O8C"/>
+                <constraint firstItem="BO2-1U-yDC" firstAttribute="top" secondItem="HeG-nH-JoC" secondAttribute="bottom" constant="20" id="RaN-mx-e2l"/>
+                <constraint firstItem="4lX-mH-6Za" firstAttribute="top" secondItem="BO2-1U-yDC" secondAttribute="top" constant="50" id="S36-K3-6Y0"/>
+                <constraint firstItem="mt8-e3-vYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Scf-eP-iNk"/>
+                <constraint firstItem="HeG-nH-JoC" firstAttribute="top" secondItem="Z69-1r-aHD" secondAttribute="bottom" constant="8" id="Sjn-K2-dZI"/>
+                <constraint firstItem="ZWn-SH-lbF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UTW-Ux-qL3"/>
+                <constraint firstItem="HeG-nH-JoC" firstAttribute="leading" secondItem="3zG-xb-bcl" secondAttribute="trailing" constant="8" id="Uaf-49-Kf6"/>
+                <constraint firstItem="tpe-qK-dek" firstAttribute="top" secondItem="ILU-Zw-7oF" secondAttribute="bottom" constant="25" id="V21-je-JJc"/>
+                <constraint firstAttribute="trailing" secondItem="V60-44-6Ns" secondAttribute="trailing" constant="8" id="VHd-aJ-G0a"/>
+                <constraint firstItem="9ig-Ra-GPJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="WtE-db-h1M"/>
+                <constraint firstItem="Z69-1r-aHD" firstAttribute="leading" secondItem="mt8-e3-vYr" secondAttribute="trailing" constant="8" id="X96-Na-21T"/>
+                <constraint firstItem="tpe-qK-dek" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Yoj-oD-zAc"/>
+                <constraint firstItem="Zio-9E-5WR" firstAttribute="bottom" secondItem="BO2-1U-yDC" secondAttribute="bottom" constant="25" id="ZSY-ns-sXI"/>
+                <constraint firstItem="ktK-eI-P5T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="bui-kL-Vyn"/>
+                <constraint firstItem="ILU-Zw-7oF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="cbV-0u-323"/>
+                <constraint firstItem="yoL-sw-Alc" firstAttribute="top" secondItem="4lX-mH-6Za" secondAttribute="bottom" id="eNP-cA-nVt"/>
+                <constraint firstItem="BO2-1U-yDC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="euh-Ev-Bb0"/>
+                <constraint firstItem="yRO-4Z-mKy" firstAttribute="leading" secondItem="9ig-Ra-GPJ" secondAttribute="trailing" constant="8" id="im3-hF-qaI"/>
+                <constraint firstAttribute="bottom" secondItem="ZWn-SH-lbF" secondAttribute="bottom" id="j86-jl-qGh"/>
+                <constraint firstItem="BO2-1U-yDC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="ju1-sz-RKC"/>
+                <constraint firstAttribute="trailing" secondItem="BO2-1U-yDC" secondAttribute="trailing" constant="45" id="kjQ-R2-LiG"/>
+                <constraint firstItem="jyo-FM-ooE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="pb5-42-UTj"/>
+                <constraint firstItem="Yz7-Rx-n5t" firstAttribute="top" secondItem="yoL-sw-Alc" secondAttribute="bottom" id="sTl-oQ-8wo"/>
+                <constraint firstAttribute="trailing" secondItem="xvP-Ys-G9c" secondAttribute="trailing" constant="8" id="uhz-rF-4Kd"/>
+                <constraint firstAttribute="trailing" secondItem="Z69-1r-aHD" secondAttribute="trailing" constant="8" id="wT7-Gh-eoJ"/>
+                <constraint firstItem="ZWn-SH-lbF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wza-Db-KeQ"/>
+                <constraint firstItem="ZWn-SH-lbF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xpu-Pw-ZOQ"/>
+                <constraint firstItem="xvP-Ys-G9c" firstAttribute="leading" secondItem="ktK-eI-P5T" secondAttribute="trailing" constant="8" id="xsu-6s-BuR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ILU-Zw-7oF" secondAttribute="trailing" constant="60" id="xyV-LT-NVv"/>
+            </constraints>
+            <point key="canvasLocation" x="136.80000000000001" y="19.95073891625616"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cafeReserv" width="1908" height="1908"/>
+        <image name="defBg" width="2160" height="4800"/>
+        <image name="reserv" width="243" height="243"/>
+        <image name="reserveButton" width="766" height="353"/>
+        <image name="tableReservation" width="151" height="212"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -3,4 +3,70 @@
    uuid = "F75CC383-B7F5-4D9D-86DD-69EF03CA133E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86E8ACBB-CBFF-4F0D-909D-CE10727FCA66"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PLINCAFE/Controllers/Cockteils/CocktailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "onFavoriteButtonClick(button:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D23DB81B-97DC-41BE-9C3A-7CC2E4165712"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PLINCAFE/Controllers/Cockteils/CocktailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "onFavoriteButtonClick(button:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D23DB81B-97DC-41BE-9C3A-7CC2E4165712 - 6615231a39292e99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PLINCAFE.CocktailsViewController.onFavoriteButtonClick(button: __C.UIButton) -&gt; ()"
+                  moduleName = "PLINCAFE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artemgaliev/Desktop/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/PLINCAFE/PLINCAFE/Controllers/Cockteils/CocktailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "4304">
+               </Location>
+               <Location
+                  uuid = "D23DB81B-97DC-41BE-9C3A-7CC2E4165712 - 6615231a39292e99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PLINCAFE.CocktailsViewController.onFavoriteButtonClick(button: __C.UIButton) -&gt; ()"
+                  moduleName = "PLINCAFE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artemgaliev/Desktop/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/PLINCAFE/PLINCAFE/Controllers/Cockteils/CocktailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "4080">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

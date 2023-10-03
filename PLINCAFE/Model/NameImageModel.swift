@@ -30,4 +30,8 @@ enum NameImage: String {
     case touchIcon = "touchIcon"
     case selectedTouch = "selectedTouch"
     case backButton = "backButton"
+    case closeB = "closeB"
+    case tableReservation = "tableReservation"
+    case tableReservationActive = "tableReservationActive"
+    case selectPriceView = "selectPriceView"
 }
